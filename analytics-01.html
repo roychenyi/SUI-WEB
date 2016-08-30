@@ -149,6 +149,9 @@
         animation: sonarEffect 1.3s ease-out 75ms;
     }
 
+    .rotate45 {
+        transform: perspective(600px) rotateY(45deg);
+    }
     @-webkit-keyframes sonarEffect {
         0% {
             opacity: 0.3;
@@ -525,7 +528,9 @@
                     <div id="tab3" class="tab active">
                         <div class="content-block-inner" style="margin: 0">
 
-                        <div class="content-block-title"> 时效统计</div>
+                        <div class="content-block-title"> 时效统计
+                        <input type="text" id="picker">
+                        </div>
                             <div class="content-block" style="position: relative">
                           <div class="timeline-container ">
                               <div class="timeline-block">
@@ -533,7 +538,7 @@
                                   <div class="timeline-content">
                                       <p>测试</p>
                                      <div>
-                                         <a class="test4">
+                                         <a class="test4 rotate45">
                                              测试4
                                          </a>
                                      </div>
@@ -584,5 +589,49 @@
 <script type='text/javascript' src='static/js/sm.min.js' charset='utf-8'></script>
 <script type="text/javascript" src="static/js/accordion.js" charset="UTF-8"></script>
 <script type="text/javascript" src="static/js/sea.js" charset="UTF-8"></script>
+
+<script>
+    var pickerVal;
+    $('#picker').picker({
+            toolbarTemplate: '<header class="bar bar-nav">\<button class="button button-link pull-right close-picker sure">确定</button>\<h1 class="title">请选择称呼</h1>\</header>',
+            /*formatValue: function (picker, value, displayValue){
+                    return displayValues[0] + ' ' + values[1] + ', ' + values[2] + ' ' + values[3] + ':' + values[4];
+                },*/
+                cols: [
+        {
+            textAlign: 'center',
+            values: ('0 1 2 3 4 5 6 7 8 9 10 11').split(' '),
+            displayValues: ('January February March April May June July August September October November December').split(' ')
+            //如果你希望显示文案和实际值不同，可以在这里加一个displayValues: [.....]
+        }
+    ],
+          /*      onChange:function(picker, values, displayValues){
+                   *//* var daysInMonth = new Date(picker.value[2], picker.value[0]*1 + 1, 0).getDate();
+                    if (values[1] > daysInMonth) {
+                        picker.cols[1].setValue(daysInMonth);
+                    }*//*
+                    console.log(displayValues[0]);
+                    console.log(picker);
+                    picker.setValue(values[0], displayValues[0]);
+                    pickerVal=displayValues[0];
+                    $('#picker').val(displayValues[0])
+              //      picker.val(displayValues[0]);
+                    console.log(picker.value);
+                },*/
+                formatValue: function (picker, value, displayValue){
+                    console.log(displayValue[0]);
+                    return displayValue[0];
+                },
+                onClose:function(picker){
+                    alert(picker.value);
+                }
+
+    }
+    );
+
+    $('.sure').click(function(){
+        alert(this.value);
+    });
+</script>
 </body>
 </html>
