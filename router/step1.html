@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SUI-Web-router-step1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+
+</head>
+<body>
+<div class="page-group">
+
+    <div class="page ">
+        <!-- 你的html代码 -->
+
+        <header class="bar bar-nav">
+            <a class="button button-link button-nav pull-left back">
+                <span class="icon icon-left"></span>
+                返回
+            </a>
+            <a class="icon icon-me pull-left open-panel" data-panel=".panel-left"></a>
+            <!--<a class="button button-link button-nav pull-left" href="#" data-transition='slide-out'>
+                <span class="icon icon-left"></span>
+                返回
+            </a>-->
+            <h1 class="title">step1</h1>
+            <a class="button button-link button-nav pull-right open-popup" data-popup=".panel-right">
+                关于
+                <span class="icon icon-menu"></span>
+            </a>
+        </header>
+
+        <nav class="bar bar-tab">
+            <a class="tab-item active" href="#">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">首页11</span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-me"></span>
+                <span class="tab-label">我</span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-star"></span>
+                <span class="tab-label">收藏</span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-settings"></span>
+                <span class="tab-label">设置</span>
+            </a>
+        </nav>
+        <div class="content">
+            <!-- 这里是页面内容区 -->
+            <div class="page-index">
+                <a href="../index.html">router到首页</a>
+               这是路由测试页面
+                <p>
+                    <a href="../analytics-01.html">统计测试页</a>
+                </p>
+        </div>
+
+    </div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>这是一个侧栏</p>
+
+            <p></p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+    </div>
+    <div class="panel panel-right panel-reveal">
+        <div class="content-block">
+            <p>这是右侧栏，panel-cover模式</p>
+            <a href="../index.html">router到首页</a>
+            <p>
+                <a href="../analytics-01.html">统计测试页</a>
+            </p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+    </div>
+        <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdn.staticfile.org/bootbox.js/4.4.0/bootbox.min.js"></script>
+        <script>
+         //   window.head.append();
+         //   document.write("<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'>");                                                                                                                                                                 console.log("测试页面");
+         var jsurl='../static/js/plugins/test/main.js';
+         var nodeScript = document.createElement('script');
+         nodeScript.setAttribute('type', 'text/javascript');
+         nodeScript.setAttribute('src', jsurl);
+   //      nodeScript.setAttribute('id',sid);
+       //  document.body.appendChild(nodeScript);
+        $('.page').appendChild(nodeScript);
+        /* seajs.use("/SUI-Web/static/js/plugins/test/main", function(main) {
+
+          //      main.init();
+            });*/
+        </script>
+</div>
+
+   </div>
+
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+
+
+</body>
+</html>

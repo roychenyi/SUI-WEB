@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SUI-Web首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="static/css/sm.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet"  href="static/css/accordion.css">
+   <!-- <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">-->
+   <link rel="stylesheet" href="static/css/swiper.css">
+   <link rel="stylesheet" href="static/css/font-awesome.css">
+<!--
+    <style>html,body{position:relative;height:100%;}body{background:#eee;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;color:#000;margin:0;padding:0;}.swiper-container{width:100%;height:100%;}.swiper-slide{text-align:center;font-size:18px;background:#fff;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;}</style>
+-->
+    <style>
+        .swiper-container .swiper-wrapper .swiper-slide a img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+<body>
+<div class="page-group">
+    <div class="page " id="index">
+        <!-- 你的html代码 -->
+
+            <header class="bar bar-nav">
+            <!--    <a class="button button-link button-nav pull-left back">
+                    <span class="icon icon-left"></span>
+                    返回
+                </a>-->
+           <!--     <a class="icon icon-me pull-left open-panel" data-panel=".panel-left"></a>-->
+                <!--<a class="button button-link button-nav pull-left" href="#" data-transition='slide-out'>
+                    <span class="icon icon-left"></span>
+                    返回
+                </a>-->
+                <h1 class="title">东方金科统计系统</h1>
+               <!-- <a class="button button-link button-nav pull-right open-panel" data-panel="#panel-right">
+                    关于
+                    <span class="icon icon-menu"></span>
+                </a>-->
+            </header>
+
+        <nav class="bar bar-tab">
+            <a class="tab-item active" href="#">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-me"></span>
+                <span class="tab-label">我</span>
+            </a>
+            <a class="tab-item" href="map.html">
+                <span class="icon icon-star"></span>
+                <span class="tab-label">收藏</span>
+            </a>
+            <a class="tab-item" href="about.html?v=1#index&a=2">
+                <span class="icon icon-settings"></span>
+                <span class="tab-label">设置</span>
+            </a>
+        </nav>
+
+            <div class="content">
+                <!-- 这里是页面内容区 -->
+                <!-- Swiper -->
+                <div class="swiper-container">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><img src="static/img/banner_1.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="static/img/banner_2.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="static/img/banner_3.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="static/img/banner_4.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="analytics-01.html"><img src="static/img/banner_5.png" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="static/img/banner_6.png" alt=""></a></div>
+
+                        </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="row text-center no-gutter table-form">
+                    <div class="col-50">
+                        <div class="today-news">
+                            <a href="#abc">今日快报</a>
+                        </div>
+                        </div>
+                    <div class="col-50">  <div class="report">
+                        <a href="">分析报告</a>
+                    </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="search-form">
+                        <a href="http://www.baidu.com" data-no-cache="true" >报表查询</a>
+                    </div>
+                    </div>
+                    <div class="col-50">  <div class="month-search">
+                        <a href="">风险监控</a>
+                    </div>
+                    </div>
+                    <div class="col-50">  <div class="report-form">
+                        <a href="analytics-01.html" data-no-cache="true">我的报表</a>
+                    </div>
+                    </div>
+                    <div class="col-50"> <div class="help-center">
+                        <a href="">帮助中心</a>
+                    </div>
+                    <div class="col-50">
+                        <a href="router/step1.html">路由测试</a>
+                        </div>
+                    </div>
+                </div>
+
+<div id="abc">123</div>
+            </div>
+
+    </div>
+
+        <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>这是一个左侧栏</p>
+            <p></p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+    </div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-right panel-reveal" id="panel-right">
+        <div class="content-block">
+            <p>这是右侧栏，panel-cover模式</p>
+            <p></p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='static/js/zepto.min.js' charset='utf-8'></script>
+<!--<script>
+    //打开自动初始化页面的功能
+    //建议不要打开自动初始化，而是自己调用 $.init 方法完成初始化
+    $.config = {
+        // 路由功能开关过滤器，返回 false 表示当前点击链接不使用路由
+        routerFilter: function($link) {
+            // 某个区域的 a 链接不想使用路由功能
+            if ($link.is('a')) {
+                return false;
+            }
+
+            return true;
+        }
+    }
+</script>-->
+<script type='text/javascript' src='static/js/sm.min.js' charset='utf-8'></script>
+<!--<script type="text/javascript" src="static/js/sm-extend.js" charset="UTF-8"></script>-->
+<!--<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>-->
+<script type="text/javascript" src="static/js/swiper.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="static/js/accordion.js" charset="UTF-8"></script>
+<script type="text/javascript" src="static/js/sea.js" charset="UTF-8"></script>
+
+<script>
+   /* $(function() {
+        var config={speed: 400,
+            spaceBetween: 100,
+            pagination: '.swiper-pagination',
+            paginationClickable: true};
+        $(".swiper-container").swiper(config);
+    });*/
+   window.onload=function(){
+       var swiper = new Swiper('.swiper-container', {
+           pagination: '.swiper-pagination',
+           paginationClickable: true,
+           autoplay: 3000
+       });
+
+   }
+   $(document).on('click','.report',function () {
+       $.ajax({
+                   type:'GET',
+               /*    dataType : "jsonp",
+                    jsonp: "callbackparam",
+                    jsonpCallback:"jsonpCallback1",*/
+                   url:'http://www.hao123.com',
+                   success:function(result){
+                       $('.page').empty().append(result);
+                   }
+               }
+       );
+   })
+
+   $(document).on("pageInit", function(e, pageId, $page) {
+       if(pageId == "index") {
+           var swiper = new Swiper('.swiper-container', {
+               pagination: '.swiper-pagination',
+               paginationClickable: true,
+               autoplay: 3000
+           });
+       }
+   });
+
+
+
+/*
+  $('a').click(function(){
+    var url= this.href;
+     var tag=window.location.hash;
+      console.log("tag:"+tag);
+    if(this.href.split('#')[1]!=null){
+        if($("#"+this.href.split('#')[1]).length>0){
+            return true;
+        }
+    }
+    */
+/*  if(url.indexOf('#')>0){
+          return true;
+      }*//*
+
+    */
+/*  var query=this.href.split('?');
+      console.log("连接参数个数："+(query.length-1));
+      console.log(query)*//*
+
+    $.ajax({
+    type:'POST',
+    url:url,
+    data:"pjax=1",
+    success:function(result){
+    var result1= $(result).find('.content').children();
+    if(result1==null){
+    result1=result;
+    }
+    $('.page').find('.content').append(result1);
+    }
+    });
+    var title =   $(this).text().replace(/\d+$/, "");
+    document.title = title;
+    history.pushState({ title: title }, title, url);
+
+    return false;
+    });
+*/
+
+
+
+
+
+   console.log($.device);
+</script>
+</body>
+</html>

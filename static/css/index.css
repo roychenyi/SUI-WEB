@@ -1,0 +1,17 @@
+.table-form{}
+.table-form div div{width: 100%;float: left;text-align: center;font-size: 1.00rem; box-sizing: border-box;background-position: center .5rem;}
+.table-form div div a{padding-top:3.25rem;width:100%;height:100%;display: inline-block; color: #7a7a7a;}
+.report-form{background: url(../img/index_01.png) no-repeat #fff 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;height: 5.26rem;border-right: 1px solid #e8e8e8;}
+.today-news{background: url(../img/index_02.png) no-repeat #fff 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;height: 5.26rem;border-bottom: 1px solid #e8e8e8;border-right: 1px solid #e8e8e8;}
+.search-form{background: url(../img/index_03.png) no-repeat #fff 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;height: 5.26rem;border-right: 1px solid #e8e8e8;border-bottom: 1px solid #e8e8e8;}
+.month-search{background: url(../img/index_04.png) no-repeat #fff 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;height: 5.26rem;border-bottom: 1px solid #e8e8e8;}
+.report{background: url(../img/index_05.png) no-repeat #fff 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;height: 5.26rem;border-bottom: 1px solid #e8e8e8;}
+.help-center{background: url(../img/index_06.png) no-repeat #fff 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;height: 5.26rem;}
+.table-form .table-active .report-form{background: url(../img/index_01_1.png) no-repeat #4fc7f9 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;color: #fff}
+.table-form .table-active .today-news{background: url(../img/index_02_1.png) no-repeat #4fc7f9 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;color: #fff}
+.table-form .table-active .search-form{background: url(../img/index_03_1.png) no-repeat #4fc7f9 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;color: #fff}
+.table-form .table-active .month-search{background: url(../img/index_04_1.png) no-repeat #4fc7f9 1.3rem 0.58rem;background-size: 0.58rem 0.58rem;color: #fff}
+.table-form .table-active .report{background: url(../img/index_05_1.png) no-repeat #4fc7f9 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;color: #fff}
+.table-form .table-active .help-center{background: url(../img/index_06_1.png) no-repeat #4fc7f9 1.3rem 0.58rem;background-size: 2.54rem 2.54rem;color: #fff}
+.table-form .table-active div{background-position:center .5rem!important}
+.table-form .table-active a{color: #fff;}
