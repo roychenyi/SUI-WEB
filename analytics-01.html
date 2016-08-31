@@ -528,11 +528,25 @@
                     <div id="tab3" class="tab active">
                         <div class="content-block-inner" style="margin: 0">
 
-                        <div class="content-block-title"> 时效统计
-                        <input type="text" id="picker">
+                        <div class="content-block-title"> 时效统计</div>
+                        <div class="list-block">
+                                <ul>
+                                    <!-- Text inputs -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">月份</div>
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="选择月份" id="picker" value="nov" readonly="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                             <div class="content-block" style="position: relative">
-                          <div class="timeline-container ">
+                          <div class="timeline-container "  id="timeline">
                               <div class="timeline-block">
                                   <div class="timeline-icon"><i class="icon icon-app"></i></div>
                                   <div class="timeline-content">
@@ -594,9 +608,6 @@
     var pickerVal;
     $('#picker').picker({
             toolbarTemplate: '<header class="bar bar-nav">\<button class="button button-link pull-right close-picker sure">确定</button>\<h1 class="title">请选择称呼</h1>\</header>',
-            /*formatValue: function (picker, value, displayValue){
-                    return displayValues[0] + ' ' + values[1] + ', ' + values[2] + ' ' + values[3] + ':' + values[4];
-                },*/
                 cols: [
         {
             textAlign: 'center',
@@ -623,7 +634,27 @@
                     return displayValue[0];
                 },
                 onClose:function(picker){
-                    alert(picker.value);
+                    $.ajax({
+                            url:"/myData/timeline",
+                            data:{orgId:picker.value},
+                            type:"post",
+                            success:function(data){
+                                if(data.result==1){
+                                    var list=data.list;
+                                    var html;
+                                    for(var i =0;i<list.length;i++){
+                                        html+="<div class='timeline-block'>"
+                                       +" <div class='timeline-icon'>"
+                                       +" <i class='icon1 icon-shixiao'></i></div>"
+                                       +"<div class='timeline-content'>list[i].memo</div></div>";
+                                    }
+                                    $('#timeline').empty().append(html);
+                                }else{
+                                    alert("系统错误，请联系管理员。");
+                                }
+                            }
+                            }
+                    );
                 }
 
     }
