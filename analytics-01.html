@@ -650,9 +650,14 @@
                                     }
                                     $('#timeline').empty().append(html);
                                 }else{
-                                    alert("系统错误，请联系管理员。");
+
+                                    $.toast("系统错误，请联系管理员。");
                                 }
-                            }
+                            },
+                                error:function(data){
+                                    console.log(data);
+                                    $.toast("操作失败！");
+                                }
                             }
                     );
                 }

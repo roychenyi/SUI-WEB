@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>综合统计查询</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="static/css/sm.min.css">
+    <link rel="stylesheet"  href="static/css/accordion.css">
+    <link rel="stylesheet" href="static/css/iconfont.css">
+    <link rel="stylesheet" href="static/css/tab.css">
+    <link rel="stylesheet" href="static/css/component.css">
+</head>
+<body>
+<iframe id="iframe1" width="100%" height="550"   frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=3973369878&verifier=163a7e28&dpc=1"></iframe>
+<button id="test1">测试</button>
+<div id="test" style="width: 100%;height: 500px;"></div>
+<script type='text/javascript' src='static/js/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='static/js/sm.min.js' charset='utf-8'></script>
+<script>
+  //  $('#test').load("http://www.baidu.com");
+  $('#test1').click(function(){
+
+      $('#iframe1').attr('src', "http://www.baidu.com");
+      console.log($('#iframe1').attr('src'));
+  });
+</script>
+</body>
+</html>
